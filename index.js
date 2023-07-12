@@ -1,9 +1,12 @@
 const express = require("express");
 const path = require("path");
 const admin = require("firebase-admin");
+const cors = require("cors");
 
 const app = express();
 const PORT = 4000;
+
+app.use(cors())
 
 const serviceAccountPath = path.resolve(__dirname, "serviceAccountKey.json");
 
